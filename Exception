@@ -1,0 +1,67 @@
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+
+class MyCustomException extends Exception {
+
+public MyCustomException (String message) {
+super(message);
+}
+}
+class CustomExcepHOME
+{
+
+
+
+public  static void getWeight(int i) throws MyCustomException{
+if(i>15)
+{
+throw new MyCustomException("WEIGHT LIMIT EXCEEDED!!!!!!!!!!!!");
+}
+else
+{
+
+Scanner sc=new Scanner(System.in);
+       System.out.println("ENTER YOUR NAME:");
+       String name=sc.nextLine();
+                System.out.println("ENTER YOUR PASSPORTNO:");
+String passportno=sc.nextLine();
+System.out.println("ENTER YOUR CLASS(ECONOMY/BUSINESS/FIRST):");
+String typeofclass=sc.nextLine();
+System.out.println("ENTER YOUR SEATNO:");
+String seatno=sc.nextLine();
+System.out.println("Mr/Mrs."+ name +" "+" your passport number is:"+"  "+passportno+" "+" your luggage is allowed "+"  "+
+                                                                            " and your seat no is:"+seatno+"  "+  "in" +
+                                        "  "+typeofclass+"class coach ,Thank you HAVE A SAFE AND WONDERFUL JOURNEY!!!!!!!");
+}
+}
+
+
+public static void main(String[] args)
+{
+   Scanner sc=new Scanner(System.in);
+
+
+
+                       
+System.out.println("ENTER YOUR LUGGAGE WEIGHT:");
+int weight;
+
+
+
+     
+try {
+
+                       
+getWeight(weight=sc.nextInt());
+             
+}
+catch(MyCustomException e)
+{
+System.out.println(e);
+}
+
+}
+
+}
